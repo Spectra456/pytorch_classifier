@@ -32,7 +32,7 @@ class ImageDataset(data.Dataset):
         for i in range(len(labels_temp)):
         	array[i][labels_temp[i]] = 1
 
-        self.target =torch.from_numpy(array)
+        self.target = torch.from_numpy(np.array(labels_temp)).long()
  		
    
     def __len__(self):  
