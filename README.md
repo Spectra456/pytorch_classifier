@@ -9,6 +9,7 @@ It's a simple CNN on Pytorch for classification type of clothing.
 - tqdm 4.31.1
 - pandas 0.24.2
 - numpy 1.16.1
+- tensorboard 1.14.0
 
 ## Run
 
@@ -24,4 +25,8 @@ git clone https://github.com/Spectra456/pytorch_classifier.git
 4. Launch training script.
 ```bash
 python train.py
+```
+5. Launch tensorboard (optional)
+```bashpython train.py
+tensorboard --logdir logs
 ```
