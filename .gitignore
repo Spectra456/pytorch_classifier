@@ -2,3 +2,4 @@ dataset/
 _pycache_/
 logs/
 __pycache__/
+weights/

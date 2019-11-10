@@ -2,6 +2,7 @@ import os
 import sys
 import torch
 import argparse
+import datetime
 from tqdm import tqdm
 import torch.optim as optim
 from torch.autograd import Variable
@@ -86,7 +87,7 @@ if __name__ == '__main__':
 	parser.add_argument('--num_workers', type=int, default=os.cpu_count(), help='number of threads for data loader, by default using all cores')
 	parser.add_argument('--dataset', type=str, default='dataset', help='path of dataset')
 	parser.add_argument('--learning_rate', type=float, default=0.0001, help='Learning rate for optimizer')
-	parser.add_argument('--device', type=str, default='cpu', help='Device for training')
+	parser.add_argument('--device', type=str, default='cuda', help='Device for training')
 
 	args = parser.parse_args()
 
@@ -145,8 +146,9 @@ if __name__ == '__main__':
 		if test_loss < best_test_loss: # Choosing best epoch and saving
 			best_test_loss = test_loss
 			best_test_accuracy = test_accuracy
-			torch.save(model.state_dict(), MODEL_SAVE_PATH + '/best.pt')
+			torch.save(model.state_dict(), MODEL_SAVE_PATH + '/last.pt')
 
 		print('Train loss: {0:.3f}|Train accuracy: {2:.3f}|Test loss: {1:.3f}|Test accuracy: {3:.3f}|'.format(train_loss, test_loss, train_accuracy, test_accuracy))
 
+	torch.save(model.state_dict(), MODEL_SAVE_PATH + '/best_loss{}_accuracy{}.pt'.format(round(best_test_loss.item(), 3), round(best_test_accuracy, 3))) # Saving the best epoch with loss and acc
 	print('| Best loss - {0:.3f}| Best accuracy - {1:.3f} |'.format(best_test_loss, best_test_accuracy))
