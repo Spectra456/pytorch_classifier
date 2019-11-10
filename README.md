@@ -34,3 +34,6 @@ tensorboard --logdir logs
 * Input size - 32x32
 * Best loss - 1.149
 * Best accuracy - 0.753
+
+![Accuracy](https://github.com/Spectra456/pytorch_classifier/blob/master/images/IMG_6036.png)
+![Loss](https://github.com/Spectra456/pytorch_classifier/blob/master/images/IMG_6037.png)
