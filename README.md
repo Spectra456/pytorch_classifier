@@ -31,6 +31,6 @@ python train.py
 tensorboard --logdir logs
 ```
 ## Results
-Input size - 32x32
-Best loss - 1.149
-Best accuracy - 0.753
+* Input size - 32x32
+* Best loss - 1.149
+* Best accuracy - 0.753
