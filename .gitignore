@@ -1,3 +1,4 @@
 dataset/
 _pycache_/
-runs/
+logs/
+__pycache__/

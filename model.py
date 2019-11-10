@@ -3,12 +3,13 @@ import torch.nn.functional as F
 
 
 class ImageClassifier(nn.Module):
-    def __init__(self, n):
+
+    def __init__(self, size):
         super().__init__()
         self.conv1 = nn.Conv2d(3, 64, kernel_size=3, padding = 1)
         self.conv2 = nn.Conv2d(64, 128, kernel_size=3, padding= 1)
         self.conv2_drop = nn.Dropout2d()
-        input_size = int((128*(n/4)*(n/4)))
+        input_size = int((128*(size[0]/4)*(size[1]/4))) # Getting size of input image from init for calculate first linear layer size 
         self.fc1 = nn.Linear(input_size, 512)
         self.fc2 = nn.Linear(512, 5)
  
