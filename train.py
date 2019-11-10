@@ -70,7 +70,7 @@ def calculate_accuracy(output, target):
 	return (preds == target).sum().item()
 
 
-size = 64
+size = 128
 train_transformations = transforms.Compose([transforms.Resize((size,size)),
 											transforms.RandomRotation(15),
 											transforms.ColorJitter(brightness=.05, contrast=.05, saturation=.05, hue=.05),
@@ -99,7 +99,7 @@ test_loader = DataLoader(test_dataset,
 
 writer = SummaryWriter(flush_secs=13)
 device = torch.device('cuda')
-model = ImageClassifier().to(device)
+model = ImageClassifier(size).to(device)
 optimizer = optim.Adam(model.parameters(), lr=0.0001)
 criterion = nn.CrossEntropyLoss()
 best_test_loss = None
