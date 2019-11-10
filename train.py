@@ -80,8 +80,8 @@ def calculate_accuracy(output, target):
 
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
-	parser.add_argument('--epochs', type=int, default=100)  # 500200 batches at bs 16, 117263 images = 273 epochs
-	parser.add_argument('--batch_size', type=int, default=16)  # effective bs = batch_size * accumulate = 16 * 4 = 64
+	parser.add_argument('--epochs', type=int, default=100)  
+	parser.add_argument('--batch_size', type=int, default=16) 
 	parser.add_argument('--img_size', type=tuple, default=(32, 32), help='input size of image ')
 	parser.add_argument('--weights', type=str, default='weights', help='path for saving weight')
 	parser.add_argument('--num_workers', type=int, default=os.cpu_count(), help='number of threads for data loader, by default using all cores')
