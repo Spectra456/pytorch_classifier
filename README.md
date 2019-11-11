@@ -20,7 +20,7 @@ git clone https://github.com/Spectra456/pytorch_classifier.git
 
 2. Download dataset from [Google Drive](https://drive.google.com/open?id=14X2KGG_ov0jG04DM2e8xK0AXeBOtnmSS).
 
-3. Unzip archive to folder of project.
+3. Unzip archive to folder of this project.
 
 4. Launch training script.
 ```bash
