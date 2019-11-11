@@ -2,7 +2,7 @@
 
 It's a simple CNN on Pytorch for classification type of clothing.
 
-## Requirments
+## Requirements
 
 - torch 1.2.0
 - torchvision 0.4.0
