@@ -19,14 +19,19 @@ Here we have 5 classes: *Blouse, Dress,Jeans Skirt, Tank*
 
 *Bloose*:
 ![Bloose](https://i.imgur.com/tXmYd1h.jpg)
+
 *Dress*:
 ![Dress](https://i.imgur.com/XIY11zh.jpg)
+
 *Jeans*:
 ![Jeans](https://i.imgur.com/YFFSPhs.jpg)
+
 *Skirt*:
 ![Skirt](https://i.imgur.com/p37IxCg.jpg)
+
 *Tank*:
-![Tank](https://i.imgur.com/6sLSHsL.jpg))
+![Tank](https://i.imgur.com/6sLSHsL.jpg)
+
 *Best Accuracy(top-1):* 77.4%
 **Accuracy(top-1) and Loss function:**
 ![Accuracy(top-1)](https://i.imgur.com/kpTzril.png)
